@@ -1,0 +1,37 @@
+#test{
+    -fx-background-image: url("../Image/fond11.jpg ");
+}
+
+#style{
+    /*-outer-border-color: rgba(0, 0, 0, 0.5);
+    -inner-border-color:   rgba(0,0,0,0.5);
+    -fx-background-insets: 0px, 5px, 10px;
+    -fx-shape: "m 330,365.21935 c -6.20565,4.97745 -97.52794,-42.69418 -105.47409,-42.31493 -7.94615,0.37925 -94.31316,56.53157 -100.96465,52.16776 -6.65149,-4.36381 10.46679,-105.9478 7.6506,-113.38785 C 128.39568,254.24429 48.302777,189.4564 50.397583,181.78197 52.49239,174.10753 154.39435,158.9968 160.6,154.01935 c 6.20565,-4.97745 43.07253,-101.170885 51.01868,-101.550136 7.94615,-0.379251 53.80675,91.865796 60.45824,96.229606 6.65149,4.36381 109.52937,9.70089 112.34556,17.14093 2.81618,7.44004 -70.74237,79.56135 -72.83717,87.23579 C 309.4905,260.74997 336.20565,360.2419 330,365.21935 Z";
+    -fill-color:  rgba(0,0,0,0.5);
+    -fx-opacity: 0;
+    -fx-background-color: -outer-border-color, -inner-border-color, -fill-color;*/
+    -fx-shape: "M 50,5 L 37,40 5,40 30,60 20,95 50,75 80,95 70,60 95,40 63,40 Z";
+    -fx-base: #fcc200;
+}
+/*
+#listeOfFavorite{
+    -fx-background-image: url("../Image/BtnColorFavorite.png");
+}
+
+ */
+
+/*
+#bouttonRecercher{
+    -fx-background-image: url("./Image/BtnRechercher.png");
+}
+#findfavorite{
+    -fx-background-image: url("./Image/BtnFindFavorite.png");
+}
+#DeleteFromFavorite{
+    -fx-background-image: url("./Image/BtnSupprimer.png");
+}
+#UpdateFavorite{
+    -fx-background-image: url("./Image/UpdateBoutton.png");
+}
+*/
+

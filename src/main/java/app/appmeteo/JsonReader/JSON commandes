@@ -1,0 +1,119 @@
+   JSONParser parser = new JSONParser();
+        FileReader fileReader = new FileReader("src/main/java/app/appmeteo/JsonReader/exemple JSON/weather_london.json");
+        Object obj = parser.parse(fileReader);
+        JSONObject jsonObject = (JSONObject) obj;
+        JSONObject adress = (JSONObject) jsonObject.get("coord");
+        // JSONObject adress = (JSONObject) jsonArray.get(0);
+        System.out.println("lon " + adress.get("lon"));
+        System.out.println("lat " + adress.get("lat"));
+---------------------------------------------------------------------------------------------------
+ JSONParser parser = new JSONParser();
+        FileReader fileReader = new FileReader("src/main/java/app/appmeteo/JsonReader/exemple JSON/weather_london.json");
+        Object obj = parser.parse(fileReader);
+        JSONObject jsonObject = (JSONObject)obj;
+        JSONArray jsonArray = (JSONArray) jsonObject.get("weather");
+        JSONObject adress = (JSONObject) jsonArray.get(0);
+        System.out.println("id " +adress.get("id"));
+        System.out.println("main " + adress.get("main"));
+        System.out.println("description " +adress.get("description"));
+        System.out.println("icon "+adress.get("icon"));
+-----------------------------------------------------
+           JSONParser parser = new JSONParser();
+        FileReader fileReader = new FileReader("src/main/java/app/appmeteo/JsonReader/exemple JSON/weather_london.json");
+        Object obj = parser.parse(fileReader);
+        JSONObject jsonObject = (JSONObject)obj;
+        JSONArray jsonArray = (JSONArray) jsonObject.get("weather");
+        /*JSONObject adress = (JSONObject) jsonArray.get(0);
+        System.out.println("id " +adress.get("id"));
+        System.out.println("main " + adress.get("main"));
+        System.out.println("description " +adress.get("description"));
+        System.out.println("icon "+adress.get("icon"));/*/
+        JSONObject jsonObject1 = (JSONObject)obj;
+        System.out.println("base " +jsonObject1.get("base"));
+
+----------------------------------------------------------------------------------------------------------  
+           JSONParser parser = new JSONParser();
+        FileReader fileReader = new FileReader("src/main/java/app/appmeteo/JsonReader/exemple JSON/weather_london.json");
+        Object obj = parser.parse(fileReader);
+        JSONObject jsonObject = (JSONObject)obj;
+        JSONObject adress = (JSONObject) jsonObject.get("main");
+       // JSONObject adress = (JSONObject) jsonArray.get(0);
+        System.out.println("temp " +adress.get("temp"));
+        System.out.println("feels_like " + adress.get("feels_like"));
+        System.out.println("temp_min " +adress.get("temp_min"));
+        System.out.println("temp_max "+adress.get("temp_max"));
+        System.out.println("pressure "+adress.get("pressure"));
+        System.out.println("humidity "+adress.get("humidity"));
+--------------------------------------------------------------------------------------------------------
+JSONParser parser = new JSONParser();
+        FileReader fileReader = new FileReader("src/main/java/app/appmeteo/JsonReader/exemple JSON/weather_london.json");
+        Object obj = parser.parse(fileReader);
+        JSONObject jsonObject = (JSONObject)obj;
+        JSONObject adress = (JSONObject) jsonObject.get("main");
+        System.out.println("visibility " + adress.get("visibility"));
+--------------------------------------------------------------------------------------------------------------------
+        JSONParser parser = new JSONParser();
+        FileReader fileReader = new FileReader("src/main/java/app/appmeteo/JsonReader/exemple JSON/weather_london.json");
+        Object obj = parser.parse(fileReader);
+        JSONObject jsonObject = (JSONObject) obj;
+        JSONObject adress = (JSONObject) jsonObject.get("wind");
+        // JSONObject adress = (JSONObject) jsonArray.get(0);
+        System.out.println("speed " + adress.get("speed"));
+        System.out.println("deg " + adress.get("deg"));
+------------------------------------------------------
+        JSONParser parser = new JSONParser();
+        FileReader fileReader = new FileReader("src/main/java/app/appmeteo/JsonReader/exemple JSON/weather_london.json");
+        Object obj = parser.parse(fileReader);
+        JSONObject jsonObject = (JSONObject) obj;
+        JSONObject adress = (JSONObject) jsonObject.get("clouds");
+        // JSONObject adress = (JSONObject) jsonArray.get(0);
+        System.out.println("all " + adress.get("all"));
+      //  System.out.println("deg " + adress.get("deg"));
+------------------------------------------------------------------------------------------------
+      JSONParser parser = new JSONParser();
+        FileReader fileReader = new FileReader("src/main/java/app/appmeteo/JsonReader/exemple JSON/weather_london.json");
+        Object obj = parser.parse(fileReader);
+        JSONObject jsonObject = (JSONObject)obj;
+       // JSONObject adress = (JSONObject) jsonObject.get("dt");
+        System.out.println("dt " +((JSONObject) obj).get("dt"));
+------------------------------------------------------------------------------------------------
+        JSONParser parser = new JSONParser();
+        FileReader fileReader = new FileReader("src/main/java/app/appmeteo/JsonReader/exemple JSON/weather_london.json");
+        Object obj = parser.parse(fileReader);
+        JSONObject jsonObject = (JSONObject) obj;
+        JSONObject adress = (JSONObject) jsonObject.get("sys");
+        // JSONObject adress = (JSONObject) jsonArray.get(0);
+        System.out.println("type " + adress.get("type"));
+        System.out.println("id " + adress.get("id"));
+        System.out.println("country " + adress.get("country"));
+        System.out.println("sunrise " + adress.get("sunrise"));
+        System.out.println("sunset " + adress.get("sunset"));<
+-----------------------------------------------------------------------------------       
+         JSONParser parser = new JSONParser();
+        FileReader fileReader = new FileReader("src/main/java/app/appmeteo/JsonReader/exemple JSON/weather_london.json");
+        Object obj = parser.parse(fileReader);
+        JSONObject jsonObject = (JSONObject)obj;
+       // JSONObject adress = (JSONObject) jsonObject.get("dt");
+        System.out.println("timezone " +((JSONObject) obj).get("timezone"));
+        -----------------------------------------------------------------------------------       
+         JSONParser parser = new JSONParser();
+        FileReader fileReader = new FileReader("src/main/java/app/appmeteo/JsonReader/exemple JSON/weather_london.json");
+        Object obj = parser.parse(fileReader);
+        JSONObject jsonObject = (JSONObject)obj;
+       // JSONObject adress = (JSONObject) jsonObject.get("dt");
+        System.out.println("id " +((JSONObject) obj).get("id"));
+               -----------------------------------------------------------------------------------       
+                JSONParser parser = new JSONParser();
+        FileReader fileReader = new FileReader("src/main/java/app/appmeteo/JsonReader/exemple JSON/weather_london.json");
+        Object obj = parser.parse(fileReader);
+        JSONObject jsonObject = (JSONObject)obj;
+       // JSONObject adress = (JSONObject) jsonObject.get("dt");
+        System.out.println("name " +((JSONObject) obj).get("name"));
+        -----------------------------------------------------------------------------------       
+                 JSONParser parser = new JSONParser();
+        FileReader fileReader = new FileReader("src/main/java/app/appmeteo/JsonReader/exemple JSON/weather_london.json");
+        Object obj = parser.parse(fileReader);
+        JSONObject jsonObject = (JSONObject)obj;
+       // JSONObject adress = (JSONObject) jsonObject.get("dt");
+        System.out.println("cod " +((JSONObject) obj).get("cod"));
+       

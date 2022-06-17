@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.AmbientLight?>
+<?import javafx.scene.PointLight?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="test" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="767.0" prefWidth="1364.0" styleClass="root" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.appmeteo.controller.AppMeteoController">
+    <Button fx:id="searchButton" layoutX="110.0" layoutY="168.0" mnemonicParsing="false" onMouseClicked="#SetGraphicContent" prefHeight="27.0" prefWidth="163.0" text="Rechercher">
+        <font>
+            <Font name="Arial Black" size="12.0" />
+        </font></Button>
+    <Label fx:id="label" layoutX="100.0" layoutY="150.0" prefHeight="25.0" prefWidth="100.0" wrapText="true" />
+    <Label fx:id="localTime" layoutX="78.0" layoutY="32.0" onMouseMoved="#changeTime" prefHeight="86.0" prefWidth="287.0" text="12:20" textFill="#000000e8">
+        <font>
+            <Font name="Arial Bold" size="72.0" />
+        </font></Label>
+    <TextField fx:id="jtxtFieldOfCity" layoutX="79.0" layoutY="119.0" prefHeight="36.0" prefWidth="227.0" />
+    <PointLight color="CHARTREUSE" layoutX="150.0" layoutY="122.0" lightOn="true" />
+    <Label fx:id="labelOfCity" layoutX="947.0" layoutY="19.0" prefHeight="93.0" prefWidth="448.0" textFill="#000000de">
+        <font>
+            <Font name="Arial Bold" size="55.0" />
+        </font>
+    </Label>
+    <Label layoutX="999.0" layoutY="265.0" prefHeight="23.0" prefWidth="122.0" text="Humidité  :" textFill="#000000e8">
+        <font>
+            <Font name="Arial Bold" size="20.0" />
+        </font></Label>
+    <Label layoutX="1000.0" layoutY="173.0" prefHeight="23.0" prefWidth="122.0" text="Max/Min :" textFill="#000000e8">
+        <font>
+            <Font name="Arial Bold" size="20.0" />
+        </font></Label>
+    <Label layoutX="999.0" layoutY="206.0" prefHeight="23.0" prefWidth="128.0" text="Pression :" textFill="#000000e8">
+        <font>
+            <Font name="Arial Bold" size="20.0" />
+        </font></Label>
+    <Label layoutX="998.0" layoutY="233.0" prefHeight="23.0" prefWidth="109.0" text="Vent      :" textFill="#000000e8">
+        <font>
+            <Font name="Arial Bold" size="20.0" />
+        </font></Label>
+    <Label fx:id="labelOfWeeksDay1" layoutX="265.0" layoutY="450.0" prefHeight="23.0" prefWidth="122.0" textFill="#000000e9">
+        <font>
+            <Font name="Arial Black" size="17.0" />
+        </font></Label>
+    <Label fx:id="labelOfWeeksDay2" layoutX="457.0" layoutY="452.0" prefHeight="22.0" prefWidth="128.0" textAlignment="JUSTIFY" textFill="#000000e8">
+        <font>
+            <Font name="Arial Black" size="17.0" />
+        </font></Label>
+    <Label fx:id="labelOfWeeksDay3" layoutX="653.0" layoutY="445.0" prefHeight="22.0" prefWidth="128.0" textAlignment="JUSTIFY" textFill="#000000e9">
+        <font>
+            <Font name="Arial Black" size="17.0" />
+        </font></Label>
+    <Label fx:id="labelOfWeeksDay4" layoutX="842.0" layoutY="443.0" prefHeight="26.0" prefWidth="146.0" textFill="#000000e8">
+        <font>
+            <Font name="Arial Black" size="17.0" />
+        </font></Label>
+    <Label fx:id="labelOfWeeksDay5" layoutX="1043.0" layoutY="445.0" prefHeight="26.0" prefWidth="122.0" textAlignment="JUSTIFY" textFill="#000000e9">
+        <font>
+            <Font name="Arial Black" size="17.0" />
+        </font></Label>
+    <Label fx:id="labelOfHumidity" layoutX="1135.0" layoutY="266.0" prefHeight="23.0" prefWidth="215.0" textFill="#000000e8">
+        <font>
+            <Font name="Arial Bold" size="20.0" />
+        </font></Label>
+    <Label fx:id="labelOfTemperatureMaxAndMin" layoutX="1143.0" layoutY="174.0" prefHeight="23.0" prefWidth="215.0" textFill="#000000e8">
+        <font>
+            <Font name="Arial Bold" size="20.0" />
+        </font></Label>
+    <Label fx:id="labelOfPression" layoutX="1141.0" layoutY="205.0" prefHeight="23.0" prefWidth="215.0" textFill="#000000e8">
+        <font>
+            <Font name="Arial Bold" size="20.0" />
+        </font></Label>
+    <Label fx:id="labelOfWind" layoutX="1140.0" layoutY="233.0" prefHeight="23.0" prefWidth="215.0" textFill="#000000e8">
+        <font>
+            <Font name="Arial Bold" size="20.0" />
+        </font></Label>
+    <Label fx:id="labelOfTemperature" layoutX="52.0" layoutY="628.0" prefHeight="53.0" prefWidth="75.0" textFill="#000000e9">
+        <font>
+            <Font name="Arial Black" size="22.0" />
+        </font>
+
+    </Label>
+    <Label fx:id="labelOfWeather" layoutX="5.0" layoutY="662.0" prefHeight="53.0" prefWidth="227.0" textAlignment="JUSTIFY" textFill="#000000e8" textOverrun="CENTER_ELLIPSIS">
+        <font>
+            <Font name="Arial Black" size="17.0" />
+        </font>
+    </Label>
+    <Button fx:id="style" layoutX="317.0" layoutY="117.0" minHeight="18.0" minWidth="30.0" mnemonicParsing="false" onMousePressed="#add_favorite" prefHeight="40.0" prefWidth="39.0" stylesheets="@../../../StyleSheet/Style.css" textAlignment="CENTER">
+        <effect>
+            <Glow />
+        </effect></Button>
+    <Button fx:id="DeleteFromFavorite" layoutX="542.0" layoutY="293.0" mnemonicParsing="false" onMousePressed="#delete_favoris" prefHeight="27.0" prefWidth="96.0" text="Supprimer">
+        <font>
+            <Font name="Arial Black" size="12.0" />
+        </font></Button>
+    <Label fx:id="labelOfWeeksDay6" layoutX="1221.0" layoutY="443.0" prefHeight="22.0" prefWidth="128.0" textAlignment="CENTER" textFill="#000000e8">
+        <font>
+            <Font name="Arial Black" size="17.0" />
+        </font></Label>
+    <AmbientLight color="CHARTREUSE" layoutX="122.0" layoutY="182.0" lightOn="true" />
+    <ImageView fx:id="weatherImage" fitHeight="161.0" fitWidth="133.0" layoutX="8.0" layoutY="496.0" pickOnBounds="true" preserveRatio="true" />
+    <ChoiceBox fx:id="listeOfFavorite" cache="true" layoutX="556.0" layoutY="223.0" prefHeight="29.0" prefWidth="323.0" scaleShape="false" stylesheets="@../../../StyleSheet/Style.css" />
+    <Button fx:id="Findfavorite" layoutX="629.0" layoutY="263.0" mnemonicParsing="false" onMouseClicked="#FavoriteFinder" prefHeight="27.0" prefWidth="198.0" text="Rechercher">
+        <font>
+            <Font name="Arial Black" size="12.0" />
+        </font></Button>
+    <Button fx:id="UpdateFavorite" layoutX="787.0" layoutY="293.0" mnemonicParsing="false" onMouseClicked="#updateFavoris" prefHeight="27.0" prefWidth="107.0" text="Mettre à jour">
+        <font>
+            <Font name="Arial Black" size="12.0" />
+        </font></Button>
+    <ImageView fx:id="iconweatherOfDay6" fitHeight="140.0" fitWidth="170.0" layoutX="1187.0" layoutY="513.0" pickOnBounds="true" preserveRatio="true" />
+    <Label fx:id="labelTemperatureOfDay6" layoutX="1210.0" layoutY="650.0" prefHeight="29.0" prefWidth="122.0" textFill="#000000e9">
+        <font>
+            <Font name="Arial Black" size="20.0" />
+        </font></Label>
+    <ImageView fx:id="iconweatherOfDay5" fitHeight="140.0" fitWidth="170.0" layoutX="1007.0" layoutY="512.0" pickOnBounds="true" preserveRatio="true" />
+    <ImageView fx:id="iconweatherOfDay4" fitHeight="140.0" fitWidth="170.0" layoutX="818.0" layoutY="516.0" pickOnBounds="true" preserveRatio="true" />
+    <Label fx:id="labelTemperatureOfDay5" layoutX="1030.0" layoutY="650.0" prefHeight="29.0" prefWidth="111.0" textFill="#000000e8">
+        <font>
+            <Font name="Arial Black" size="20.0" />
+        </font></Label>
+    <ImageView fitHeight="267.0" fitWidth="594.0" layoutX="793.0" layoutY="-94.0">
+        <image>
+            <Image url="@../../../Image/imag1.png" />
+        </image>
+    </ImageView>
+    <ImageView fitHeight="252.0" fitWidth="552.0" layoutX="884.0" layoutY="101.0">
+        <image>
+            <Image url="@../../../Image/imag3.png" />
+        </image>
+    </ImageView>
+    <ImageView fitHeight="92.0" fitWidth="227.0" layoutX="19.0" layoutY="417.0">
+        <image>
+            <Image url="@../../../Image/imag4.png" />
+        </image>
+    </ImageView>
+    <ImageView fitHeight="92.0" fitWidth="227.0" layoutX="212.0" layoutY="412.0">
+        <image>
+            <Image url="@../../../Image/imag4.png" />
+        </image>
+    </ImageView>
+    <ImageView fitHeight="92.0" fitWidth="227.0" layoutX="395.0" layoutY="410.0">
+        <image>
+            <Image url="@../../../Image/imag4.png" />
+        </image>
+    </ImageView>
+    <ImageView fitHeight="92.0" fitWidth="237.0" layoutX="580.0" layoutY="399.0">
+        <image>
+            <Image url="@../../../Image/imag4.png" />
+        </image>
+    </ImageView>
+    <ImageView fitHeight="92.0" fitWidth="227.0" layoutX="782.0" layoutY="404.0">
+        <image>
+            <Image url="@../../../Image/imag4.png" />
+        </image>
+    </ImageView>
+    <ImageView fitHeight="92.0" fitWidth="237.0" layoutX="961.0" layoutY="406.0">
+        <image>
+            <Image url="@../../../Image/imag4.png" />
+        </image>
+    </ImageView>
+    <ImageView fitHeight="92.0" fitWidth="260.0" layoutX="1126.0" layoutY="406.0">
+        <image>
+            <Image url="@../../../Image/imag4.png" />
+        </image>
+    </ImageView>
+    <ImageView fitHeight="92.0" fitWidth="227.0" layoutX="395.0" layoutY="611.0">
+        <image>
+            <Image url="@../../../Image/imag5.png" />
+        </image>
+    </ImageView>
+    <ImageView fitHeight="92.0" fitWidth="227.0" layoutX="585.0" layoutY="607.0">
+        <image>
+            <Image url="@../../../Image/imag5.png" />
+        </image>
+    </ImageView>
+    <ImageView fitHeight="92.0" fitWidth="227.0" layoutX="771.0" layoutY="606.0">
+        <image>
+            <Image url="@../../../Image/imag5.png" />
+        </image>
+    </ImageView>
+    <ImageView fitHeight="92.0" fitWidth="227.0" layoutX="979.0" layoutY="608.0">
+        <image>
+            <Image url="@../../../Image/imag5.png" />
+        </image>
+    </ImageView>
+    <ImageView fitHeight="92.0" fitWidth="227.0" layoutX="1150.0" layoutY="611.0">
+        <image>
+            <Image url="@../../../Image/imag5.png" />
+        </image>
+    </ImageView>
+    <ImageView fitHeight="267.0" fitWidth="386.0" layoutX="-21.0" layoutY="-94.0">
+        <image>
+            <Image url="@../../../Image/imag1.png" />
+        </image>
+    </ImageView>
+    <ImageView fitHeight="92.0" fitWidth="163.0" layoutX="242.0" layoutY="675.0">
+        <image>
+            <Image url="@../../../Image/imag7.png" />
+        </image>
+    </ImageView>
+    <ImageView fitHeight="92.0" fitWidth="163.0" layoutX="429.0" layoutY="676.0">
+        <image>
+            <Image url="@../../../Image/imag7.png" />
+        </image>
+    </ImageView>
+    <ImageView fitHeight="86.0" fitWidth="163.0" layoutX="629.0" layoutY="678.0">
+        <image>
+            <Image url="@../../../Image/imag7.png" />
+        </image>
+    </ImageView>
+    <ImageView fitHeight="78.0" fitWidth="163.0" layoutX="819.0" layoutY="679.0">
+        <image>
+            <Image url="@../../../Image/imag7.png" />
+        </image>
+    </ImageView>
+    <ImageView fitHeight="92.0" fitWidth="146.0" layoutX="1022.0" layoutY="674.0">
+        <image>
+            <Image url="@../../../Image/imag7.png" />
+        </image>
+    </ImageView>
+    <ImageView fitHeight="86.0" fitWidth="163.0" layoutX="1192.0" layoutY="675.0">
+        <image>
+            <Image url="@../../../Image/imag7.png" />
+        </image>
+    </ImageView>
+    <ImageView fitHeight="86.0" fitWidth="215.0" layoutX="205.0" layoutY="608.0">
+        <image>
+            <Image url="@../../../Image/imag5.png" />
+        </image>
+    </ImageView>
+
+    <Label fx:id="labelTemperatureOfDay4" layoutX="840.0" layoutY="645.0" prefHeight="29.0" prefWidth="128.0" textFill="#000000e8">
+        <font>
+            <Font name="Arial Black" size="20.0" />
+        </font></Label>
+    <Label fx:id="labelTemperatureOfDay3" layoutX="650.0" layoutY="645.0" prefHeight="29.0" prefWidth="122.0" textFill="#000000e9">
+        <font>
+            <Font name="Arial Black" size="20.0" />
+        </font></Label>
+    <Label fx:id="labelTemperatureOfDay2" layoutX="455.0" layoutY="650.0" prefHeight="29.0" prefWidth="122.0" textFill="#000000e8">
+        <font>
+            <Font name="Arial Black" size="20.0" />
+        </font></Label>
+    <Label fx:id="labelTemperatureOfDay1" layoutX="265.0" layoutY="640.0" prefHeight="29.0" prefWidth="128.0" textFill="#000000e9">
+        <font>
+            <Font name="Arial Black" size="20.0" />
+        </font></Label>
+    <ImageView fx:id="iconweatherOfDay3" fitHeight="131.0" fitWidth="170.0" layoutX="617.0" layoutY="514.0" pickOnBounds="true" preserveRatio="true" />
+    <ImageView fx:id="iconweatherOfDay2" fitHeight="140.0" fitWidth="170.0" layoutX="420.0" layoutY="517.0" pickOnBounds="true" preserveRatio="true" />
+    <ImageView fx:id="iconweatherOfDay1" fitHeight="140.0" fitWidth="170.0" layoutX="239.0" layoutY="513.0" pickOnBounds="true" preserveRatio="true" />
+    <Label layoutX="52.0" layoutY="451.0" prefHeight="25.0" prefWidth="133.0" text="Aujourd'hui" textAlignment="CENTER" textFill="#000000e8">
+        <font>
+            <Font name="Arial Black" size="20.0" />
+        </font>
+    </Label>
+    <ImageView fitHeight="67.0" fitWidth="75.0" layoutX="882.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url="@../../../Image/location.png" />
+        </image>
+    </ImageView>
+    <Label layoutX="782.0" layoutY="229.0" prefHeight="17.0" prefWidth="75.0" text="Favoris">
+        <font>
+            <Font name="Arial Black" size="12.0" />
+        </font>
+    </Label>
+   <ImageView fitHeight="86.0" fitWidth="215.0" layoutX="3.0" layoutY="608.0">
+      <image>
+         <Image url="@../../../Image/imag5.png" />
+      </image>
+   </ImageView>
+    <stylesheets>
+        <URL value="@../../../StyleSheet/Style.css" />
+        <URL value="@../../../StyleSheet/Style.css" />
+    </stylesheets>
+</AnchorPane>
